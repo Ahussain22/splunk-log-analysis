@@ -28,6 +28,7 @@ In simple terms, Splunk helps analysts:
 ```spl
 index=main
 ```
+![Index Main](./images/indexmain.png)
 
 ### What this does
 Displays all ingested log data.
@@ -60,6 +61,7 @@ index=main | rex field=_raw "^(?<ip>\d+\.\d+\.\d+\.\d+)" | stats count by ip | s
 
 This showed that **10.0.0.5** was the most active IP address and stood out as suspicious.
 
+![Index Main IP](./images/indexmainip.png)
 ---
 
 ## 🔍 Step 3 – Detect Failed Logins
@@ -98,7 +100,7 @@ index=main 401 | rex field=_raw "^(?<ip>\d+\.\d+\.\d+\.\d+)" | stats count by ip
 | 10.0.0.5 | 9 |
 
 This confirmed that all failed login attempts were coming from the same IP address.
-
+![Index Main 401](./images/indexmain401.png)
 ---
 
 ## 🔍 Step 5 – Detect Access to Admin Page
@@ -106,7 +108,7 @@ This confirmed that all failed login attempts were coming from the same IP addre
 ```spl
 index=main "/admin"
 ```
-
+![Index Main Admin](./images/indexmainadmin.png)
 ### What this does
 Searches for requests made to the `/admin` page.
 
