@@ -157,13 +157,9 @@ The main conclusions from this investigation were:
 
 ---
 
-## 📚 Simple Summary
+## 📚 Summary
 This lab showed how Splunk can be used to investigate suspicious web activity. I uploaded log files, searched through the events, identified the busiest IP address, filtered failed logins, and found signs of a brute force attack. I also detected a separate attempt to access a restricted admin page.
 
 ---
 
-## 🚀 Next Steps
-- Analyse larger and more realistic log datasets
-- Create Splunk dashboards to visualise suspicious activity
-- Build alerts for repeated failed logins
-- Simulate attacks from a VM and detect them in Splunk
+
